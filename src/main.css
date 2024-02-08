@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 40px 0;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 500px;
+  background: #444753;
+  border-radius: 5px;
+}
+
+.form-content {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  height: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+input.input-date {
+  height: 100%;
+  margin-top: 10px;
+}
+
+input.input-distance {
+  height: 100%;
+  margin-top: 10px;
+}
+
+.button-block {
+  display: flex;
+  align-items: flex-end;
+  height: 60px;
+  width: 70px;
+}
+
+button.form__send-btn {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+
+    padding: 20px 40px;
+}
+
+.list-item {
+  display: flex;
+  color: #000;
+  background-color: white;
+  margin-bottom: 10px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item-content {width: 70%;display: flex;justify-content: space-around;}
+
+span {
+  width: 40%;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button.edit, button.remove {
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  background: white;
+}
+
+.edit::after {
+	content: '\270E';
+}
+
+.remove::after {
+	content: '\2718';
+}
+
+.modal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: -1000;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+  padding: 60px 15px;
+}
+
+.modal-content {
+  width: 340px;
+  height: 200px;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-active {
+  position: fixed;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.modal-send__btn, .modal-close__btn{
+  width: 100px;
+  height: 50px;
+  background-color: rebeccapurple;
+  color: wheat;
+  cursor: pointer;
+}
